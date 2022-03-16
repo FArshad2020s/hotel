@@ -12,8 +12,10 @@ while ($info=mysqli_fetch_array($resulte)){
 	$address=$info['address'];
 	$id=$info['id'];
 	$rooms=$info['rooms'];
+	$img_address=$info['image'];
 	echo"$id- name: <b>$name</b> &nbsp;&nbsp;&nbsp;&nbsp; rooms:<b>$rooms</b> &nbsp;&nbsp;&nbsp;&nbsp; 
-	address: <b>$address</b> &nbsp;&nbsp;&nbsp;&nbsp; <a href=get_info.php?id=$id>reserve this hotel</a><hr>";
+	address: <b>$address</b> &nbsp;&nbsp;&nbsp;&nbsp; <a href=get_info.php?id=$id>reserve this hotel</a>&nbsp;&nbsp;&nbsp;";
+	echo "<img height=20% src=$img_address><hr>";
 }
 ?>
 </body>
